@@ -31,6 +31,10 @@ import EditGrammar from "./pages/Admin/EditGrammar";
 import AddVocabulary from "./pages/Admin/AddVocabulary";
 import DeleteVocabulary from "./pages/Admin/DeleteVocabulary";
 import EditVocabulary from "./pages/Admin/EditVocabulary";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import GrammarList from "./pages/Admin/GrammarList";
+import VocabularyList from "./pages/Admin/VocabularyList";
+import ReportDetail from "./pages/Admin/ReportDetail";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
@@ -61,22 +65,32 @@ export default function App() {
             <Route path="/userinfo-table" element={<UserInformationTable />} />
             <Route path="/studentprocess-table" element={<StudenProcessTables />} />
 
-            {/* Admin Learner Management */}
+            {/* Admin Dashboard */}
+            <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/freeze" element={<FreezeLearner />} />
             <Route path="/admin/unfreeze" element={<UnfreezeLearner />} />
             <Route path="/admin/search" element={<SearchLearner />} />
             <Route path="/admin/learners" element={<ViewLearners />} />
-            <Route path="/admin/delete-material" element={<DeleteMaterial />} />
-            <Route path="/admin/reports" element={<ViolationReports />} />
             <Route path="/admin/xp" element={<LearnerXP />} />
             <Route path="/admin/levels" element={<LearnerLevels />} />
             <Route path="/admin/stats" element={<SystemStats />} />
+
+            {/* Grammar */}
+            <Route path="/admin/grammar" element={<GrammarList />} />
             <Route path="/admin/grammar/add" element={<AddGrammar />} />
             <Route path="/admin/grammar/delete" element={<DeleteGrammar />} />
             <Route path="/admin/grammar/edit" element={<EditGrammar />} />
+
+            {/* Vocabulary */}
+            <Route path="/admin/vocabulary" element={<VocabularyList />} />
             <Route path="/admin/vocabulary/add" element={<AddVocabulary />} />
             <Route path="/admin/vocabulary/delete" element={<DeleteVocabulary />} />
             <Route path="/admin/vocabulary/edit" element={<EditVocabulary />} />
+
+            {/* Reports */}
+            <Route path="/admin/reports" element={<ViolationReports />} />
+            <Route path="/admin/reports/:id" element={<ReportDetail />} />
+            <Route path="/admin/delete-material" element={<DeleteMaterial />} />
 
 
             {/* Ui Elements */}

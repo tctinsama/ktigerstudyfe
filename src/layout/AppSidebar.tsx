@@ -30,31 +30,39 @@ const ACTIVE_COLOR = "bg-[rgba(19,110,97,0.08)] text-[#136E61]";
 const navItems: NavItem[] = [
   {
     icon: <UserIcon />,
-    name: "Quản lí học viên ",
+    name: "Quản lý học viên",
     subItems: [
       { name: "Danh sách học viên", path: "/admin/learners", pro: false },
-      { name: "Tìm kiếm học viên", path: "/admin/search", pro: false },
-      { name: "Đóng băng tài khoản", path: "/admin/freeze", pro: false },
-      { name: "Mở khóa tài khoản", path: "/admin/unfreeze", pro: false },
-      { name: "Tiến trình học tập", path: "/studentprocess-table", pro: false },
-      { name: "Điểm kinh nghiệm", path: "/admin/xp", pro: false },
-      { name: "Cấp độ học viên", path: "/admin/levels", pro: false },
-      { name: "Thống kê", path: "/admin/stats", pro: false },
-      { name: "Báo cáo vi phạm", path: "/admin/reports", pro: false },
-      { name: "Xóa tài liệu vi phạm", path: "/admin/delete-material", pro: false },
+      { name: "Xem/Sửa trạng thái", path: "/admin/search", pro: false },
+      { name: "XP & Level", path: "/admin/xp", pro: false },
     ],
-
   },
   {
     icon: <GridIcon />,
-    name: "Quản lí nội dung",
+    name: "Quản lý ngữ pháp",
     subItems: [
+      { name: "Danh sách ngữ pháp", path: "/admin/grammar", pro: false },
       { name: "Thêm ngữ pháp", path: "/admin/grammar/add", pro: false },
+      { name: "Sửa ngữ pháp", path: "/admin/grammar/edit", pro: false },
       { name: "Xóa ngữ pháp", path: "/admin/grammar/delete", pro: false },
-      { name: "Chỉnh sửa ngữ pháp", path: "/admin/grammar/edit", pro: false },
+    ],
+  },
+  {
+    icon: <GridIcon />,
+    name: "Quản lý từ vựng",
+    subItems: [
+      { name: "Danh sách từ vựng", path: "/admin/vocabulary", pro: false },
       { name: "Thêm từ vựng", path: "/admin/vocabulary/add", pro: false },
+      { name: "Sửa từ vựng", path: "/admin/vocabulary/edit", pro: false },
       { name: "Xóa từ vựng", path: "/admin/vocabulary/delete", pro: false },
-      { name: "Chỉnh sửa từ vựng", path: "/admin/vocabulary/edit", pro: false },
+    ],
+  },
+  {
+    icon: <GridIcon />,
+    name: "Quản lý báo cáo",
+    subItems: [
+      { name: "Danh sách báo cáo", path: "/admin/reports", pro: false },
+      { name: "Xóa tài liệu vi phạm", path: "/admin/delete-material", pro: false },
     ],
   },
   {
