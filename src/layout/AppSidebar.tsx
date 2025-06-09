@@ -31,12 +31,31 @@ const navItems: NavItem[] = [
   {
     icon: <UserIcon />,
     name: "Quản lí học viên ",
-    subItems: [{ name: "Quản lí thông tin học viên", path: "/userinfo-table", pro: false },
-              { name: "Quản lí tiến trình học tập học viên ", path: "/studentprocess-table", pro: false },
-              { name: "Quản lí tài liệu học viên ", path: "/", pro: false },
-              { name: "Quản lí báo cáo", path: "/", pro: false },
+    subItems: [
+      { name: "Danh sách học viên", path: "/admin/learners", pro: false },
+      { name: "Tìm kiếm học viên", path: "/admin/search", pro: false },
+      { name: "Đóng băng tài khoản", path: "/admin/freeze", pro: false },
+      { name: "Mở khóa tài khoản", path: "/admin/unfreeze", pro: false },
+      { name: "Tiến trình học tập", path: "/studentprocess-table", pro: false },
+      { name: "Điểm kinh nghiệm", path: "/admin/xp", pro: false },
+      { name: "Cấp độ học viên", path: "/admin/levels", pro: false },
+      { name: "Thống kê", path: "/admin/stats", pro: false },
+      { name: "Báo cáo vi phạm", path: "/admin/reports", pro: false },
+      { name: "Xóa tài liệu vi phạm", path: "/admin/delete-material", pro: false },
     ],
 
+  },
+  {
+    icon: <GridIcon />,
+    name: "Quản lí nội dung",
+    subItems: [
+      { name: "Thêm ngữ pháp", path: "/admin/grammar/add", pro: false },
+      { name: "Xóa ngữ pháp", path: "/admin/grammar/delete", pro: false },
+      { name: "Chỉnh sửa ngữ pháp", path: "/admin/grammar/edit", pro: false },
+      { name: "Thêm từ vựng", path: "/admin/vocabulary/add", pro: false },
+      { name: "Xóa từ vựng", path: "/admin/vocabulary/delete", pro: false },
+      { name: "Chỉnh sửa từ vựng", path: "/admin/vocabulary/edit", pro: false },
+    ],
   },
   {
     icon: <GridIcon />,
