@@ -15,11 +15,13 @@ import Calendar from "./pages/Calendar";
 import BasicTables from "./pages/Tables/BasicTables";
 import FormElements from "./pages/Forms/FormElements";
 import Blank from "./pages/Blank";
-import AppLayout from "./layout/AppLayout";
+import AdminLayout from "./layout/AdminLayout";
+import UserLayout from "./layout/UserLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import UserInformationTable from "./pages/Tables/UserInformationTable";
 import StudenProcessTables from "./pages/Tables/StudenProcessTables";
+import UserHome from "./pages/User/Home";
 
 
 export default function App() {
@@ -28,9 +30,9 @@ export default function App() {
       <Router>
         <ScrollToTop />
         <Routes>
-          {/* Dashboard Layout */}
-          <Route element={<AppLayout />}>
-            <Route index path="/" element={<Home />} />
+          {/* Admin Layout */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<Home />} />
 
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />
@@ -56,7 +58,12 @@ export default function App() {
 
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
-            <Route path="/bar-chart" element={<BarChart />} />
+          <Route path="/bar-chart" element={<BarChart />} />
+          </Route>
+
+          {/* User Layout */}
+          <Route path="/user" element={<UserLayout />}>
+            <Route index element={<UserHome />} />
           </Route>
 
           {/* Auth Layout */}
